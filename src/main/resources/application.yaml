@@ -1,0 +1,37 @@
+server:
+  port: 8082
+
+#astra:
+#  api:
+#    application-token: AstraCS:RkMjkZnuIjPMcTSzDdNyIoOs:51f3bccaa2bbac078afea0b7d45eb6492bf59bc89bb2e5a6ee77a285d0276189
+#    database-id: fc3b40bf-f5f9-4f5d-8b10-0a3595ee7029
+#    database-region: asia-south1
+#    cross-region-failback: false
+#    grpc:
+#      enabled: true
+#  cql:
+#    enabled: true
+#    download-scb: 
+#      enabled: true
+#    driver-config:
+#      basic:
+#        session-keyspace: chitchat
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: chitchat
+      contact-points: localhost
+      port: 9042
+      local-datacenter: datacenter1
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka 
+    
+  
