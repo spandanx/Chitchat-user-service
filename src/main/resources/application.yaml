@@ -45,5 +45,14 @@ in-memory-auth:
   password: pass1
   role: USER
       
-    
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+#        web:
+#          filter:
+#            CommonsRequestLoggingFilter: DEBUG
+
+        
   

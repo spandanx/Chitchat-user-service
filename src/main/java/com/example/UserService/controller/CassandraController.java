@@ -47,6 +47,7 @@ public class CassandraController {
 	
 	@GetMapping("/phone-to-id")
 	public ResponseEntity<List<Phonetoid>> getIdByPhone(@RequestParam(required = false) String phonenumber){
+		System.out.println("getIdByPhone() called");
 		List<Phonetoid> list = new ArrayList<Phonetoid>();
 //		Optional<Phonetoid> sbc = phonetoidRepository.findById(phonenumber);
 		list = phonetoidRepository.findById(phonenumber).stream().collect(Collectors.toList());
@@ -57,6 +58,10 @@ public class CassandraController {
 	public ResponseEntity<Phonetoid> createPhone(@RequestBody Phonetoid phoneToId){
 		phonetoidRepository.save(phoneToId);
 		return new ResponseEntity<>(phoneToId, HttpStatus.CREATED);
+	}
+	@GetMapping("/public")
+	public ResponseEntity<String> publicAPI(){
+		return new ResponseEntity<>("PUBLIC TEST", HttpStatus.OK);
 	}
 	
 }
