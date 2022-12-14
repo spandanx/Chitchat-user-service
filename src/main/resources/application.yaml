@@ -3,9 +3,9 @@ server:
 
 #astra:
 #  api:
-#    application-token: AstraCS:RkMjkZnuIjPMcTSzDdNyIoOs:51f3bccaa2bbac078afea0b7d45eb6492bf59bc89bb2e5a6ee77a285d0276189
-#    database-id: fc3b40bf-f5f9-4f5d-8b10-0a3595ee7029
-#    database-region: asia-south1
+#    application-token: <app-token>
+#    database-id: <db-id>
+#    database-region: <region>
 #    cross-region-failback: false
 #    grpc:
 #      enabled: true
